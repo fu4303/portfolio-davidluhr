@@ -1,0 +1,3 @@
+name: By the Sun and Stars
+markdown: kramdown
+exclude: ["node_modules", "gulpfile.js", "package.json"]
