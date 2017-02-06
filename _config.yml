@@ -1,3 +1,8 @@
-name: By the Sun and Stars
+name: David Luhr
 markdown: kramdown
 exclude: ["node_modules", "gulpfile.js", "package.json"]
+permalink: pretty
+collections:
+  work:
+    output: true
+    permalink: /work/:path/

@@ -5,11 +5,6 @@ var prefix = require('gulp-autoprefixer');
 var cp = require('child_process');
 var pug = require('gulp-pug');
 
-var pugIncludesInput = '';
-var pugIncludesOutput = '';
-var pugLayoutsInput = '';
-var pugLayoutsOutput = '';
-
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
   jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
