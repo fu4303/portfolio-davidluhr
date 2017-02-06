@@ -9,15 +9,13 @@
     <link rel="stylesheet" href="/assets/css/main.css">
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="{{ site.github.url }}/work" class="nav__link {% if page.url contains 'work' %}current{% endif %}">Work</a></li>
-          <li><a href="{{ site.github.url }}/" class="nav__link logo">Luhr.co</a></li>
-          <li><a href="{{ site.github.url }}/about" class="nav__link {% if page.url contains 'about' %}current{% endif %}">About</a></li>
-        </ul>
-      </nav>
-    </header>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__list__item"><a href="{{ site.github.url }}/work" class="nav__link {% if page.url contains 'work' %}current{% endif %}">Work</a></li>
+        <li class="nav__list__item"><a href="{{ site.github.url }}/" class="nav__link logo">Luhr.co</a></li>
+        <li class="nav__list__item"><a href="{{ site.github.url }}/about" class="nav__link {% if page.url contains 'about' %}current{% endif %}">About</a></li>
+      </ul>
+    </nav>
     {{ content }}
     <footer class="footer">
       <p>

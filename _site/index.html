@@ -9,28 +9,65 @@
     <link rel="stylesheet" href="/assets/css/main.css">
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="/work" class="nav__link ">Work</a></li>
-          <li><a href="/" class="nav__link logo">Luhr.co</a></li>
-          <li><a href="/about" class="nav__link ">About</a></li>
-        </ul>
-      </nav>
-    </header>
-    <h1>
-  Hey there,<br>
-  I'm David Luhr.
-</h1>
-<p>I design compelling experiences and code them, too.</p>
-
-<ul class="portfolio--list">
-  
-    <li class="portfolio--item"><a href="/work/westminster-college/">Westminster College</a></li>
-  
-    <li class="portfolio--item"><a href="/work/cultural-asset-maps/">Cultural Asset Maps</a></li>
-  
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__list__item"><a href="/work" class="nav__link ">Work</a></li>
+        <li class="nav__list__item"><a href="/" class="nav__link logo">Luhr.co</a></li>
+        <li class="nav__list__item"><a href="/about" class="nav__link ">About</a></li>
+      </ul>
+    </nav>
+    <header class="header">
+  <h1>
+    Hey there,<br>
+    I'm David Luhr.
+  </h1>
+  <p>I design compelling experiences and code them, too.</p>
+  <div class="arrow__icon__wrap">
+    <div class="arrow__icon arrow__icon--down">
+      <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
+      <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
+    </div>
+  </div>
+</header>
+<ul class="portfolio__list">
+  <li class="portfolio__item portfolio__item--left portfolio__item--thistle">
+    <div class="portfolio__feature">
+      <img src="assets/img/westminster-mockup-1.png" alt="" class="portfolio__img portfolio__img--top">
+      <img src="assets/img/westminster-mockup-2.png" alt="" class="portfolio__img portfolio__img--bottom">
+    </div>
+    <a href="#" class="portfolio__link">
+      <div class="portfolio__desc">
+        <p class="portfolio__title">Westminster College</p>
+      </div>
+      <div class="arrow__icon__wrap">
+        <div class="arrow__icon arrow__icon--right">
+          <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
+          <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
+        </div>
+      </div>
+    </a>
+  </li>
+  <li class="portfolio__item portfolio__item--right portfolio__item--cyan">
+    <div class="portfolio__feature">
+      <img src="assets/img/cams-mockup-1.png" alt="" class="portfolio__img portfolio__img--top">
+      <img src="assets/img/cams-mockup-2.png" alt="" class="portfolio__img portfolio__img--bottom">
+    </div>
+    <a href="#">
+      <div class="portfolio__desc">
+        <p class="portfolio__title">Cultural Asset Maps</p>
+      </div>
+    </a>
+  </li>
 </ul>
+
+<!--
+<ul class="portfolio__list">
+  
+    <li class="portfolio__item"><a href="/work/westminster-college/">Westminster College</a></li>
+  
+    <li class="portfolio__item"><a href="/work/cultural-asset-maps/">Cultural Asset Maps</a></li>
+  
+</ul>-->
 
     <footer class="footer">
       <p>

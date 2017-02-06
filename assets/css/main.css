@@ -13,6 +13,7 @@ body {
   line-height: 1.6;
   font-family: "Roboto",sans-serif;
   color: #aeb0b2;
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
@@ -83,6 +84,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: #aeb0b2;
   font-family: "Abril Fatface",sans-serif;
+  margin: 0 0 2rem;
 }
 
 h1 {
@@ -99,6 +101,69 @@ p {
   margin: 0 0 2rem 0;
 }
 
+.arrow__icon {
+  background: #383140;
+  display: inline-block;
+  height: 4rem;
+  position: relative;
+  right: 0;
+  top: 0.9rem;
+  transition: background 300ms ease-in-out;
+  width: 4rem;
+}
+
+.arrow__icon--down {
+  box-shadow: 0.2rem -0.2rem 0.6rem rgba(0, 0, 0, 0.16);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.arrow__icon--right {
+  box-shadow: 0.2rem 0.2rem 0.6rem rgba(0, 0, 0, 0.16);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.arrow__icon__wrap {
+  margin-right: 1rem;
+}
+
+.arrow__icon__chevron {
+  background: white;
+  display: inline-block;
+  height: 0.2rem;
+  position: absolute;
+  width: 1rem;
+}
+
+.arrow__icon__chevron--1 {
+  left: 1.4rem;
+  top: 1.5rem;
+}
+
+.arrow__icon__chevron--2 {
+  left: 1.8rem;
+  top: 2rem;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.header {
+  background: #25202a;
+  box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+  padding: 4rem;
+  position: relative;
+}
+
+.header .arrow__icon__wrap {
+  bottom: 0;
+  left: 50%;
+  margin-right: 0;
+  position: absolute;
+  -webkit-transform: translate(-50%, 1.8rem);
+  transform: translate(-50%, 1.8rem);
+}
+
 .logo {
   color: #88f9ae;
   font-family: "Abril Fatface",sans-serif;
@@ -111,10 +176,118 @@ p {
   color: white;
 }
 
+.nav {
+  background: #25202a;
+  height: 4rem;
+  padding: 0 4rem;
+  width: 100%;
+}
+
+.nav__list {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list__item {
+  display: inline-block;
+  line-height: 4rem;
+}
+
 .nav__link {
   text-decoration: none;
 }
 
 .current {
   text-decoration: underline;
+}
+
+.portfolio__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio__item {
+  box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+  height: 18rem;
+  margin: 18rem 0 20rem;
+  position: relative;
+  width: 28rem;
+}
+
+.portfolio__item--thistle {
+  background: #9063cd;
+}
+
+.portfolio__item--cyan {
+  background: #22a7f0;
+}
+
+.portfolio__feature {
+  background: #25202a;
+  box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  left: 2rem;
+  height: 20rem;
+  position: absolute;
+  top: -10rem;
+  width: 20rem;
+}
+
+.portfolio__img {
+  -webkit-filter: drop-shadow(0 0.8rem 1.6rem rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 0.8rem 1.6rem rgba(0, 0, 0, 0.2));
+  left: 1rem;
+  position: absolute;
+}
+
+.portfolio__img--top {
+  top: -1rem;
+  z-index: 1;
+}
+
+.portfolio__img--bottom {
+  top: 3rem;
+}
+
+.portfolio__link {
+  background: #25202a;
+  box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+  bottom: -5.5rem;
+  left: 2rem;
+  height: 11rem;
+  position: absolute;
+  text-decoration: none;
+  transition: background 300ms ease-in-out;
+  width: 28rem;
+}
+
+.portfolio__link:hover {
+  background: #2c2433;
+}
+
+.portfolio__link:hover .arrow__icon {
+  background: #4d3f59;
+}
+
+.portfolio__link .arrow__icon__wrap {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  -webkit-transform: translateY(-60%);
+  transform: translateY(-60%);
+}
+
+.portfolio__title {
+  color: #aeb0b2;
+  font-family: "Abril Fatface",sans-serif;
 }

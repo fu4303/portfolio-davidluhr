@@ -3,15 +3,53 @@ layout: default
 title: David Luhr | Web and UX Design | Front-End Development
 description:
 ---
-
-<h1>
-  Hey there,<br>
-  I'm David Luhr.
-</h1>
-<p>I design compelling experiences and code them, too.</p>
-{% assign work-items = site.work | sort:"order" %}
-<ul class="portfolio--list">
-  {% for work-item in work-items %}
-    <li class="portfolio--item"><a href="{{ work-item.url }}">{{ work-item.title }}</a></li>
-  {% endfor %}
+<header class="header">
+  <h1>
+    Hey there,<br>
+    I'm David Luhr.
+  </h1>
+  <p>I design compelling experiences and code them, too.</p>
+  <div class="arrow__icon__wrap">
+    <div class="arrow__icon arrow__icon--down">
+      <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
+      <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
+    </div>
+  </div>
+</header>
+<ul class="portfolio__list">
+  <li class="portfolio__item portfolio__item--left portfolio__item--thistle">
+    <div class="portfolio__feature">
+      <img src="assets/img/westminster-mockup-1.png" alt="" class="portfolio__img portfolio__img--top">
+      <img src="assets/img/westminster-mockup-2.png" alt="" class="portfolio__img portfolio__img--bottom">
+    </div>
+    <a href="#" class="portfolio__link">
+      <div class="portfolio__desc">
+        <p class="portfolio__title">Westminster College</p>
+      </div>
+      <div class="arrow__icon__wrap">
+        <div class="arrow__icon arrow__icon--right">
+          <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
+          <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
+        </div>
+      </div>
+    </a>
+  </li>
+  <li class="portfolio__item portfolio__item--right portfolio__item--cyan">
+    <div class="portfolio__feature">
+      <img src="assets/img/cams-mockup-1.png" alt="" class="portfolio__img portfolio__img--top">
+      <img src="assets/img/cams-mockup-2.png" alt="" class="portfolio__img portfolio__img--bottom">
+    </div>
+    <a href="#">
+      <div class="portfolio__desc">
+        <p class="portfolio__title">Cultural Asset Maps</p>
+      </div>
+    </a>
+  </li>
 </ul>
+
+<!--{% assign work-items = site.work | sort:"order" %}
+<ul class="portfolio__list">
+  {% for work-item in work-items %}
+    <li class="portfolio__item"><a href="{{ work-item.url }}">{{ work-item.title }}</a></li>
+  {% endfor %}
+</ul>-->
