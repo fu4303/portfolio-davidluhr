@@ -1,0 +1,39 @@
+.arrow__icon
+  background: $purple--dark
+  display: inline-block
+  height: 4rem
+  position: relative
+  right: 0
+  top: 0.9rem
+  transition: background $transition
+  width: 4rem
+
+  &--down
+    box-shadow: 0.2rem -0.2rem 0.6rem rgba(0, 0, 0, .16)
+    transform: rotate(135deg)
+
+    &:hover
+      background: $purple
+
+  &--right
+    box-shadow: 0.2rem 0.2rem 0.6rem rgba(0, 0, 0, .16)
+    transform: rotate(45deg)
+
+  &__wrap
+    margin-right: 1rem
+
+  &__chevron
+    background: white
+    display: inline-block
+    height: 0.2rem
+    position: absolute
+    width: 1rem
+
+    &--1
+      left: 1.4rem
+      top: 1.5rem
+
+    &--2
+      left: 1.8rem
+      top: 2rem
+      transform: rotate(90deg)

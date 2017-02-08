@@ -1,0 +1,111 @@
+.portfolio
+
+  &__heading
+    margin-left: 4rem
+
+  &__list
+    display: flex
+    flex-flow: row wrap
+    list-style: none
+    margin: 0 0 8rem
+    padding: 0
+
+    &:before, &:after
+      content: " "
+      display: table
+
+    &:after
+      clear: both
+
+  &__item
+    box-shadow: $box-shadow
+    height: 18rem
+    margin: 18rem 0 2rem
+    position: relative
+    width: 28rem
+
+    &:first-of-type
+      margin-top: 12rem
+
+    &--right
+      margin-left: auto
+
+    &--thistle
+      background: $thistle
+
+    &--orange
+      background: $orange
+
+    &--cyan
+      background: $cyan
+
+    &--red
+      background: $red
+
+  &__feature
+    background: $purple--deep
+    box-shadow: $box-shadow
+    border-radius: 50%
+    height: 20rem
+    position: absolute
+    top: -10rem
+    width: 20rem
+
+    &--left
+      left: 2rem
+
+    &--right
+      right: 2rem
+
+  &__img
+    filter: drop-shadow($box-shadow)
+    position: absolute
+
+    &--left
+      left: 1rem
+
+    &--right
+      right: 1rem
+
+    &--top
+      top: -1rem
+      z-index: 1
+
+    &--bottom
+      top: 3rem
+
+  &__link
+    background: $purple--deep
+    box-shadow: $box-shadow
+    bottom: -5.5rem
+    display: flex
+    align-items: center
+    height: 11rem
+    padding: 2rem
+    position: absolute
+    text-decoration: none
+    transition: background $transition
+    width: 28rem
+
+    &--left
+      left: 2rem
+
+    &--right
+      right: 2rem
+
+    &:hover
+      background: $purple--darker
+
+      .arrow__icon
+        background: $purple
+
+    .arrow__icon__wrap
+      position: absolute
+      right: 2rem
+      top: 50%
+      transform: translateY(-60%)
+
+  &__title
+    color: $color
+    font-family: $display
+    margin-bottom: 0

@@ -6,6 +6,14 @@
     <title>David Luhr | Web and UX Design | Front-End Development</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/assets/img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/assets/img/favicons/safari-pinned-tab.svg" color="#4d3f59">
+    <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#88f9ae">
     <link rel="stylesheet" href="/assets/css/main.css">
   </head>
   <body>
@@ -22,52 +30,84 @@
     I'm David Luhr.
   </h1>
   <p>I design compelling experiences and code them, too.</p>
-  <div class="arrow__icon__wrap">
-    <div class="arrow__icon arrow__icon--down">
-      <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
-      <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
-    </div>
+  <div class="arrow__icon__wrap header__icon">
+    <a href="#work" title="Tap to Scroll Down">
+      <div class="arrow__icon arrow__icon--down">
+        <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
+        <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
+      </div>
+    </a>
   </div>
 </header>
-<ul class="portfolio__list">
-  <li class="portfolio__item portfolio__item--left portfolio__item--thistle">
-    <div class="portfolio__feature">
-      <img src="assets/img/westminster-mockup-1.png" alt="" class="portfolio__img portfolio__img--top">
-      <img src="assets/img/westminster-mockup-2.png" alt="" class="portfolio__img portfolio__img--bottom">
-    </div>
-    <a href="#" class="portfolio__link">
-      <div class="portfolio__desc">
-        <p class="portfolio__title">Westminster College</p>
-      </div>
-      <div class="arrow__icon__wrap">
-        <div class="arrow__icon arrow__icon--right">
-          <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
-          <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
-        </div>
-      </div>
-    </a>
-  </li>
-  <li class="portfolio__item portfolio__item--right portfolio__item--cyan">
-    <div class="portfolio__feature">
-      <img src="assets/img/cams-mockup-1.png" alt="" class="portfolio__img portfolio__img--top">
-      <img src="assets/img/cams-mockup-2.png" alt="" class="portfolio__img portfolio__img--bottom">
-    </div>
-    <a href="#">
-      <div class="portfolio__desc">
-        <p class="portfolio__title">Cultural Asset Maps</p>
-      </div>
-    </a>
-  </li>
-</ul>
+<h2 class="portfolio__heading" id="work">Recent Work</h2>
 
-<!--
-<ul class="portfolio__list">
+<ul class="portfolio__list clearfix">
   
-    <li class="portfolio__item"><a href="/work/westminster-college/">Westminster College</a></li>
+    <li class="portfolio__item portfolio__item--left portfolio__item--thistle">
+      <div class="portfolio__feature portfolio__feature--left">
+        <img src="/assets/img/westminster-mockup-1.png" alt="" class="portfolio__img portfolio__img--top portfolio__img--left">
+        <img src="/assets/img/westminster-mockup-2.png" alt="" class="portfolio__img portfolio__img--bottom portfolio__img--left">
+      </div>
+      <a href="/work/westminster-college/" class="portfolio__link portfolio__link--left" title="Tap to View Project">
+        <p class="portfolio__title">Westminster College</p>
+        <div class="arrow__icon__wrap">
+          <div class="arrow__icon arrow__icon--right">
+            <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
+            <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
+          </div>
+        </div>
+      </a>
+    </li>
   
-    <li class="portfolio__item"><a href="/work/cultural-asset-maps/">Cultural Asset Maps</a></li>
+    <li class="portfolio__item portfolio__item--right portfolio__item--orange">
+      <div class="portfolio__feature portfolio__feature--right">
+        <img src="/assets/img/titan-flash-mockup-1.png" alt="" class="portfolio__img portfolio__img--top portfolio__img--right">
+        <img src="/assets/img/titan-flash-mockup-2.png" alt="" class="portfolio__img portfolio__img--bottom portfolio__img--right">
+      </div>
+      <a href="/work/titan-flash/" class="portfolio__link portfolio__link--right" title="Tap to View Project">
+        <p class="portfolio__title">Titan Flash</p>
+        <div class="arrow__icon__wrap">
+          <div class="arrow__icon arrow__icon--right">
+            <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
+            <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
+          </div>
+        </div>
+      </a>
+    </li>
   
-</ul>-->
+    <li class="portfolio__item portfolio__item--left portfolio__item--cyan">
+      <div class="portfolio__feature portfolio__feature--left">
+        <img src="/assets/img/cams-mockup-1.png" alt="" class="portfolio__img portfolio__img--top portfolio__img--left">
+        <img src="/assets/img/cams-mockup-2.png" alt="" class="portfolio__img portfolio__img--bottom portfolio__img--left">
+      </div>
+      <a href="/work/cultural-asset-maps/" class="portfolio__link portfolio__link--left" title="Tap to View Project">
+        <p class="portfolio__title">Cultural Asset Maps</p>
+        <div class="arrow__icon__wrap">
+          <div class="arrow__icon arrow__icon--right">
+            <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
+            <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
+          </div>
+        </div>
+      </a>
+    </li>
+  
+    <li class="portfolio__item portfolio__item--right portfolio__item--red">
+      <div class="portfolio__feature portfolio__feature--right">
+        <img src="/assets/img/prboar-mockup-1.png" alt="" class="portfolio__img portfolio__img--top portfolio__img--right">
+        <img src="/assets/img/probar-mockup-2.png" alt="" class="portfolio__img portfolio__img--bottom portfolio__img--right">
+      </div>
+      <a href="/work/probar/" class="portfolio__link portfolio__link--right" title="Tap to View Project">
+        <p class="portfolio__title">PROBAR</p>
+        <div class="arrow__icon__wrap">
+          <div class="arrow__icon arrow__icon--right">
+            <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
+            <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
+          </div>
+        </div>
+      </a>
+    </li>
+  
+</ul>
 
     <footer class="footer">
       <p>

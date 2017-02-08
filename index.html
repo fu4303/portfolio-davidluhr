@@ -9,47 +9,33 @@ description:
     I'm David Luhr.
   </h1>
   <p>I design compelling experiences and code them, too.</p>
-  <div class="arrow__icon__wrap">
-    <div class="arrow__icon arrow__icon--down">
-      <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
-      <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
-    </div>
+  <div class="arrow__icon__wrap header__icon">
+    <a href="#work" title="Tap to Scroll Down">
+      <div class="arrow__icon arrow__icon--down">
+        <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
+        <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
+      </div>
+    </a>
   </div>
 </header>
-<ul class="portfolio__list">
-  <li class="portfolio__item portfolio__item--left portfolio__item--thistle">
-    <div class="portfolio__feature">
-      <img src="assets/img/westminster-mockup-1.png" alt="" class="portfolio__img portfolio__img--top">
-      <img src="assets/img/westminster-mockup-2.png" alt="" class="portfolio__img portfolio__img--bottom">
-    </div>
-    <a href="#" class="portfolio__link">
-      <div class="portfolio__desc">
-        <p class="portfolio__title">Westminster College</p>
-      </div>
-      <div class="arrow__icon__wrap">
-        <div class="arrow__icon arrow__icon--right">
-          <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
-          <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
-        </div>
-      </div>
-    </a>
-  </li>
-  <li class="portfolio__item portfolio__item--right portfolio__item--cyan">
-    <div class="portfolio__feature">
-      <img src="assets/img/cams-mockup-1.png" alt="" class="portfolio__img portfolio__img--top">
-      <img src="assets/img/cams-mockup-2.png" alt="" class="portfolio__img portfolio__img--bottom">
-    </div>
-    <a href="#">
-      <div class="portfolio__desc">
-        <p class="portfolio__title">Cultural Asset Maps</p>
-      </div>
-    </a>
-  </li>
-</ul>
-
-<!--{% assign work-items = site.work | sort:"order" %}
-<ul class="portfolio__list">
+<h2 class="portfolio__heading" id="work">Recent Work</h2>
+{% assign work-items = site.work | sort:"order" %}
+<ul class="portfolio__list clearfix">
   {% for work-item in work-items %}
-    <li class="portfolio__item"><a href="{{ work-item.url }}">{{ work-item.title }}</a></li>
+    <li class="portfolio__item {% cycle 'portfolio__item--left', 'portfolio__item--right' %} portfolio__item--{{ work-item.highlight }}">
+      <div class="portfolio__feature {% cycle 'portfolio__feature--left', 'portfolio__feature--right' %}">
+        <img src="{{ site.baseurl}}/assets/img/{{ work-item.image-top }}" alt="" class="portfolio__img portfolio__img--top {% cycle 'portfolio__img--left', 'portfolio__img--left', 'portfolio__img--right', 'portfolio__img--right' %}">
+        <img src="{{ site.baseurl}}/assets/img/{{ work-item.image-bottom }}" alt="" class="portfolio__img portfolio__img--bottom {% cycle 'portfolio__img--left', 'portfolio__img--left', 'portfolio__img--right', 'portfolio__img--right' %}">
+      </div>
+      <a href="{{ work-item.url }}" class="portfolio__link {% cycle 'portfolio__link--left', 'portfolio__link--right' %}" title="Tap to View Project">
+        <p class="portfolio__title">{{ work-item.title }}</p>
+        <div class="arrow__icon__wrap">
+          <div class="arrow__icon arrow__icon--right">
+            <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
+            <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
+          </div>
+        </div>
+      </a>
+    </li>
   {% endfor %}
-</ul>-->
+</ul>
