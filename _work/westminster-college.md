@@ -3,9 +3,19 @@ layout: default
 title: Westminster College
 description:
 order: 1
+type: professional
 image-top: westminster-mockup-1.png
 image-bottom: westminster-mockup-2.png
 highlight: thistle
+skills:
+  - UX Design
+  - Front-End Development
+  - Branding
+  - Content Strategy
+  - Style Guide
+  - Analytics
+  - CRO
+  - Information architecture
 ---
 
 # Westminster College Website
@@ -13,17 +23,9 @@ highlight: thistle
 ## A redesign of the highest degree
 
 ## Skills Used
-- User Experience
-- Front-End Development
-- Branding
-- Content Strategy
-- Content Management
-- Web Governance
-- Style Guide
-- Information Architecture
-- Analytics
-- SEO
-- CRO
+{% for skill in page.skills %}
+  - {{ skill }}
+{% endfor %}
 
 ## Problem
 Westminster College was suffering from declining enrollment and a confused branding identity. Symptomatic of this was the college’s website, which had grown over a decade of neglect to almost 9,000 pages of largely abandoned and broken content. Behind the content was an aging, in-house content management system with permissions for over 200 individuals. The result of this was an unpredictable information architecture based on internal organizational structure and absent oversight.

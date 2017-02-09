@@ -3,9 +3,14 @@ layout: default
 title: Cultural Asset Maps
 description:
 order: 3
+type: professional
 image-top: cams-mockup-1.png
 image-bottom: cams-mockup-2.png
 highlight: cyan
+skills:
+ - UX Design
+ - Front-End Development
+ - Branding
 ---
 
 # Cultural Asset Maps
@@ -13,9 +18,9 @@ highlight: cyan
 ## Demonstrating economic impact in the creative community.
 
 ## Skills used
-- User Experience Design
-- Front-End Development
-- Branding
+{% for skill in page.skills %}
+  - {{ skill }}
+{% endfor %}
 
 ## Problem
 Westminster College’s Arts Administration program was seeking to better connect its students with the local arts organization community and generate meaningful work for the industry. The program director had a vision to demonstrate the collective economic impact of local organizations to help secure future development funding for non-profits continuously under threat from federal budget cuts. To help gain support from the community, the program needed a prototype cultural asset mapping website to sell the vision of collecting impact data and visually showing the strong presence of the arts in the Salt Lake valley.

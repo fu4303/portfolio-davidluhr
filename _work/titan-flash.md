@@ -3,9 +3,14 @@ layout: default
 title: Titan Flash
 description:
 order: 2
+type: professional
 image-top: titan-flash-mockup-1.png
 image-bottom: titan-flash-mockup-2.png
 highlight: orange
+skills:
+  - UX Design
+  - Front-End Development
+  - Branding
 ---
 
 # Titan Flash
@@ -13,9 +18,9 @@ highlight: orange
 ## Bringing excitement to a technical product in a stuffy industry.
 
 ## Skills used
-- User Experience
-- Front-End Development
-- Branding
+{% for skill in page.skills %}
+  - {{ skill }}
+{% endfor %}
 
 ## Problem
 Titan Flash is an upcoming, innovative product that greatly simplifies and improves the effectiveness of waterproofing windows. The central challenge of developing the branding, marketing, and website for Titan Flash is to take a highly-technical product and make it exciting and approachable in a construction industry riddled with boring spec sheets, white papers, and ultra-serious product demonstrations.

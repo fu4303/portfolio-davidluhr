@@ -18,24 +18,4 @@ description:
     </a>
   </div>
 </header>
-<h2 class="portfolio__heading" id="work">Recent Work</h2>
-{% assign work-items = site.work | sort:"order" %}
-<ul class="portfolio__list clearfix">
-  {% for work-item in work-items %}
-    <li class="portfolio__item {% cycle 'portfolio__item--left', 'portfolio__item--right' %} portfolio__item--{{ work-item.highlight }}">
-      <div class="portfolio__feature {% cycle 'portfolio__feature--left', 'portfolio__feature--right' %}">
-        <img src="{{ site.baseurl}}/assets/img/{{ work-item.image-top }}" alt="" class="portfolio__img portfolio__img--top {% cycle 'portfolio__img--left', 'portfolio__img--left', 'portfolio__img--right', 'portfolio__img--right' %}">
-        <img src="{{ site.baseurl}}/assets/img/{{ work-item.image-bottom }}" alt="" class="portfolio__img portfolio__img--bottom {% cycle 'portfolio__img--left', 'portfolio__img--left', 'portfolio__img--right', 'portfolio__img--right' %}">
-      </div>
-      <a href="{{ work-item.url }}" class="portfolio__link {% cycle 'portfolio__link--left', 'portfolio__link--right' %}" title="Tap to View Project">
-        <p class="portfolio__title">{{ work-item.title }}</p>
-        <div class="arrow__icon__wrap">
-          <div class="arrow__icon arrow__icon--right">
-            <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
-            <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
-          </div>
-        </div>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+{% include professional-list.html %}

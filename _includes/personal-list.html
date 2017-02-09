@@ -1,0 +1,9 @@
+{% assign work-items = site.work | sort:"order" %}
+<h2 class="portfolio__heading" id="work">Personal Work</h2>
+<ul class="portfolio__list clearfix">
+  {% for work-item in work-items %}
+    {% if work-item.type == "personal" %}
+      {% include portfolio-list-item.html %}
+    {% endif %}
+  {% endfor %}
+</ul>

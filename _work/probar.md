@@ -3,9 +3,16 @@ layout: default
 title: PROBAR
 description:
 order: 4
+type: professional
 image-top: prboar-mockup-1.png
 image-bottom: probar-mockup-2.png
 highlight: red
+skills:
+  - Graphic Design
+  - HTML email
+  - CRO
+  - Style Guide
+  - Packaging Design
 ---
 
 # PROBAR
@@ -13,11 +20,9 @@ highlight: red
 ## Taking eCommerce, email marketing, and packaging design in-house.
 
 ## Skills used
-- Graphic design
-- HTML email
-- CRO
-- Style Guide
-- Packaging design
+{% for skill in page.skills %}
+  - {{ skill }}
+{% endfor %}
 
 ## Problem
 PROBAR has enjoyed over a decade of double-digit growth, year-over-year. As a local manufacturer of vegan, organic meal replacement bars, its products had the quality to drive sales with barely any marketing. As the company set scope on expanding to new regional distributors and diversifying its product lineup, it faced a dire need for a dedicated marketing team and complete control over eCommerce sales.
