@@ -4,6 +4,7 @@ var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
 var cp = require('child_process');
 var pug = require('gulp-pug');
+var image = require('gulp-image');
 
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -47,6 +48,12 @@ gulp.task('pug', function () {
   return gulp.src('_pugfiles/*.pug')
     .pipe(pug())
     .pipe(gulp.dest('_includes'));
+});
+
+gulp.task('image', function() {
+  return gulp.src('assets/img/source/*')
+    .pipe(image())
+    .pipe(gulp.dest('assets/img/final'));
 });
 
 gulp.task('watch', function () {

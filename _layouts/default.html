@@ -17,20 +17,15 @@
     <link rel="stylesheet" href="/assets/css/main.css">
   </head>
   <body>
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__list__item"><a href="{{ site.github.url }}/work" class="nav__link {% if page.url contains 'work' %}current{% endif %}">Work</a></li>
-        <li class="nav__list__item"><a href="{{ site.github.url }}/" class="nav__link logo">Luhr.co</a></li>
-        <li class="nav__list__item"><a href="{{ site.github.url }}/about" class="nav__link {% if page.url contains 'about' %}current{% endif %}">About</a></li>
-      </ul>
-    </nav>
+    {% include nav.html %}
     {{ content }}
     <footer class="footer">
-      <p>
-        David Luhr<br />
-        Web and UX Design | Front-End Development<br />
-        <a href="mailto:davidc.luhr@gmail.com">davidc.luhr@gmail.com</a>
-      </p>
+      <div class="footer__plate"></div>
+      <div class="footer__text">
+        <p><small>David Luhr | Web and UX Design | Front-End Development</small></p>
+        <p><small><a href=""><a href="https://www.linkedin.com/in/davidluhr" target="_blank">LinkedIn</a> | <a href="https://github.com/davidluhr" target="_blank">GitHub</a> | <a href="https://www.instagram.com/davidluhr/" target="_blank">Instagram</a> </small></p>
+        <p><small>&copy; 2017 David Luhr</small></p>
+      </div>
     </footer>
   </body>
 </html>

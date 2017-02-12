@@ -60,6 +60,7 @@
   &__img
     filter: drop-shadow($box-shadow)
     position: absolute
+    width: 23.8rem
 
     &--left
       left: 1rem
@@ -75,11 +76,12 @@
       top: 3rem
 
   &__link
+    align-items: center
     background: $purple--deep
     box-shadow: $box-shadow
     bottom: -5.5rem
     display: flex
-    align-items: center
+    flex-flow: row wrap
     height: 11rem
     padding: 2rem
     position: absolute
@@ -106,6 +108,7 @@
       transform: translateY(-60%)
 
   &__title
-    color: $color
     font-family: $display
     margin-bottom: 0
+    transition: color $transition
+    width: 17rem

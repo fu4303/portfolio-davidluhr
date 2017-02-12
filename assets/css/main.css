@@ -82,7 +82,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #aeb0b2;
+  color: white;
   font-family: "Abril Fatface",sans-serif;
   margin: 0 0 2rem;
 }
@@ -94,11 +94,18 @@ h1 {
 }
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
 }
 
 p {
   margin: 0 0 2rem 0;
+}
+
+blockquote {
+  border-left: 0.4rem solid #4d3f59;
+  font-size: 1.8rem;
+  margin: 0 0 2rem;
+  padding-left: 2rem;
 }
 
 code {
@@ -125,6 +132,16 @@ code {
 }
 
 .arrow__icon--down:hover {
+  background: #4d3f59;
+}
+
+.arrow__icon--left {
+  box-shadow: -0.2rem -0.2rem 0.6rem rgba(0, 0, 0, 0.16);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.arrow__icon--left:hover {
   background: #4d3f59;
 }
 
@@ -158,6 +175,56 @@ code {
   transform: rotate(90deg);
 }
 
+.badges {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 2rem;
+}
+
+.badges--narrow {
+  max-width: 17rem;
+  padding-bottom: 0;
+}
+
+.badge {
+  background: #383140;
+  border-radius: 0.2rem;
+  color: white;
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.8rem;
+}
+
+.footer {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 20rem;
+  overflow: hidden;
+  padding: 6rem 4rem 0;
+  position: relative;
+  text-align: center;
+}
+
+.footer__plate {
+  background: #25202a;
+  border-radius: 50%;
+  box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+  left: 50%;
+  height: 300%;
+  position: absolute;
+  top: 2rem;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 300%;
+  z-index: -1;
+}
+
 .header {
   background: #25202a;
   box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
@@ -167,7 +234,6 @@ code {
 }
 
 .header__icon {
-  bottom: 0;
   left: 6.7rem;
   margin-right: 0;
   position: absolute;
@@ -175,20 +241,65 @@ code {
   transform: translate(-50%, 1.8rem);
 }
 
+.header__icon--bottom {
+  bottom: 0;
+}
+
+.header__icon--top {
+  top: -4.7rem;
+}
+
+.header--feature {
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+}
+
 .header--thistle {
   background: #9063cd;
+  color: white;
 }
 
 .header--orange {
   background: #f27935;
+  color: #383140;
 }
 
 .header--cyan {
   background: #22a7f0;
+  color: #383140;
 }
 
 .header--red {
   background: #d42029;
+  color: white;
+}
+
+.header--p-b-large {
+  margin-bottom: 10rem;
+  padding-bottom: 7.5rem;
+}
+
+.header__image {
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.image--banner {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.image--circle {
+  border-radius: 50%;
+}
+
+.image--thumb {
+  box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+  height: 15rem;
+  width: 15rem;
 }
 
 .logo {
@@ -203,11 +314,19 @@ code {
   color: white;
 }
 
+.logo--github {
+  fill: white;
+}
+
 .nav {
   background: #25202a;
   height: 4rem;
   padding: 0 4rem;
   width: 100%;
+}
+
+.nav--feature {
+  height: 8rem;
 }
 
 .nav__list {
@@ -314,6 +433,7 @@ code {
   -webkit-filter: drop-shadow(0 0.8rem 1.6rem rgba(0, 0, 0, 0.2));
   filter: drop-shadow(0 0.8rem 1.6rem rgba(0, 0, 0, 0.2));
   position: absolute;
+  width: 23.8rem;
 }
 
 .portfolio__img--left {
@@ -334,13 +454,15 @@ code {
 }
 
 .portfolio__link {
+  -ms-flex-align: center;
+  align-items: center;
   background: #25202a;
   box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
   bottom: -5.5rem;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-  align-items: center;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
   height: 11rem;
   padding: 2rem;
   position: absolute;
@@ -374,7 +496,28 @@ code {
 }
 
 .portfolio__title {
-  color: #aeb0b2;
   font-family: "Abril Fatface",sans-serif;
   margin-bottom: 0;
+  transition: color 300ms ease-in-out;
+  width: 17rem;
+}
+
+.text__wrap {
+  padding: 0 2rem;
+}
+
+.text__wrap--first {
+  padding-top: 2rem;
+}
+
+.text__wrap--narrow {
+  padding: 0 4rem;
+}
+
+.title--light {
+  color: white;
+}
+
+.title--dark {
+  color: #383140;
 }

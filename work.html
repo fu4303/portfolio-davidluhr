@@ -3,12 +3,18 @@ layout: default
 title: Work | David Luhr | Web and UX Design | Front-End Development
 description:
 ---
-
-<h1>Work</h1>
-<p>I design compelling experiences and code them, too.</p>
-{% assign work-items = site.work | sort:"order" %}
-<ul class="portfolio--list">
-  {% for work-item in work-items %}
-    <li class="portfolio--item"><a href="{{ work-item.url }}">{{ work-item.title }}</a></li>
-  {% endfor %}
-</ul>
+<header class="header">
+  <h1>Work</h1>
+  <div class="arrow__icon__wrap header__icon header__icon--bottom">
+    <a href="#work" title="Tap to Scroll Down">
+      <div class="arrow__icon arrow__icon--down">
+        <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
+        <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
+      </div>
+    </a>
+  </div>
+</header>
+<h2 class="portfolio__heading" id="work">Professional Work</h2>
+{% include professional-list.html %}
+<h2 class="portfolio__heading">Personal Work</h2>
+{% include personal-list.html %}

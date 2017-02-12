@@ -6,20 +6,42 @@
   position: relative
 
   &__icon
-    bottom: 0
     left: 6.7rem
     margin-right: 0
     position: absolute
     transform: translate(-50%, 1.8rem)
 
+    &--bottom
+      bottom: 0
+
+    &--top
+      top: -4.7rem
+
+  &--feature
+    margin-bottom: 0
+    padding-bottom: 2rem
+
   &--thistle
     background: $thistle
+    color: white
 
   &--orange
     background: $orange
+    color: $purple--dark
 
   &--cyan
     background: $cyan
+    color: $purple--dark
 
   &--red
     background: $red
+    color: white
+
+  &--p-b-large
+    margin-bottom: 10rem
+    padding-bottom: 7.5rem
+
+  &__image
+    left: 50%
+    position: absolute
+    transform: translateX(-50%)

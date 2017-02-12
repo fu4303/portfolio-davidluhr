@@ -1,12 +1,12 @@
-<li class="portfolio__item portfolio__item--{% cycle 'left', 'right' %} portfolio__item--{{ work-item.highlight }}">
+<li class="portfolio__item {% cycle 'portfolio__item--left', 'portfolio__item--right' %} portfolio__item--{{ work-item.highlight }}">
   <div class="portfolio__feature {% cycle 'portfolio__feature--left', 'portfolio__feature--right' %}">
-    <img src="{{ site.baseurl}}/assets/img/{{ work-item.image-top }}" alt="" class="portfolio__img portfolio__img--top portfolio__img--{% cycle 'left', 'left', 'right', 'right' %}">
-    <img src="{{ site.baseurl}}/assets/img/{{ work-item.image-bottom }}" alt="" class="portfolio__img portfolio__img--bottom portfolio__img--{% cycle 'left', 'left', 'right', 'right' %}}">
+    <img src="{{ site.baseurl}}/assets/img/final/{{ work-item.image-top }}" alt="" class="portfolio__img portfolio__img--top {% cycle 'portfolio__img--left', 'portfolio__img--left', 'portfolio__img--right', 'portfolio__img--right' %}">
+    <img src="{{ site.baseurl}}/assets/img/final/{{ work-item.image-bottom }}" alt="" class="portfolio__img portfolio__img--bottom {% cycle 'portfolio__img--left', 'portfolio__img--left', 'portfolio__img--right', 'portfolio__img--right' %}">
   </div>
-  <a href="{{ work-item.url }}" class="portfolio__link portfolio__link--{% cycle 'left', 'right' %}" title="Tap to View Project">
+  <a href="{{ work-item.url }}" class="portfolio__link {% cycle 'portfolio__link--left', 'portfolio__link--right' %}" title="Tap to View Project">
     <p class="portfolio__title">{{ work-item.title }}</p>
-    <ul class="badges">
-      {% for skill in work-item.skills %}
+    <ul class="badges badges--narrow">
+      {% for skill in work-item.skills limit:2 %}
         <li class="badge">{{ skill }}</li>
       {% endfor %}
     </ul>
