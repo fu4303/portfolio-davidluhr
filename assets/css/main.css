@@ -18,6 +18,12 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+@media only screen and (min-width: 680px) {
+  body {
+    font-size: 1.8rem;
+  }
+}
+
 .button, button {
   display: inline-block;
   height: 3.8rem;
@@ -216,12 +222,12 @@ code {
   border-radius: 50%;
   box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
   left: 50%;
-  height: 300%;
+  height: 400vw;
   position: absolute;
   top: 2rem;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: 300%;
+  width: 400vw;
   z-index: -1;
 }
 
@@ -230,23 +236,27 @@ code {
   box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
   margin-bottom: 6rem;
   padding: 4rem;
+}
+
+.header__content {
+  margin: 0 auto;
+  max-width: 60rem;
   position: relative;
 }
 
 .header__icon {
-  left: 6.7rem;
-  margin-right: 0;
+  margin: 0 0 0 2.4rem;
   position: absolute;
   -webkit-transform: translate(-50%, 1.8rem);
   transform: translate(-50%, 1.8rem);
 }
 
 .header__icon--bottom {
-  bottom: 0;
+  bottom: -6rem;
 }
 
 .header__icon--top {
-  top: -4.7rem;
+  top: -8.7rem;
 }
 
 .header--feature {
@@ -280,10 +290,7 @@ code {
 }
 
 .header__image {
-  left: 50%;
   position: absolute;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
 }
 
 .image--banner {
@@ -339,7 +346,8 @@ code {
   -ms-flex-pack: justify;
   justify-content: space-between;
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 60rem;
   padding: 0;
 }
 
@@ -366,7 +374,8 @@ code {
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
   list-style: none;
-  margin: 0 0 8rem;
+  margin: 0 auto 8rem;
+  max-width: 68rem;
   padding: 0;
 }
 
@@ -388,11 +397,30 @@ code {
 }
 
 .portfolio__item:first-of-type {
-  margin-top: 12rem;
+  margin-top: 14rem;
+  margin-left: 0;
+}
+
+@media only screen and (min-width: 560px) {
+  .portfolio__item--left {
+    margin-right: 5rem;
+  }
+}
+
+@media only screen and (min-width: 610px) {
+  .portfolio__item--left {
+    margin-top: 14rem;
+  }
 }
 
 .portfolio__item--right {
   margin-left: auto;
+}
+
+@media only screen and (min-width: 610px) {
+  .portfolio__item--right {
+    margin-top: 28rem;
+  }
 }
 
 .portfolio__item--thistle {
@@ -503,7 +531,9 @@ code {
 }
 
 .text__wrap {
-  padding: 0 2rem;
+  margin: 0 auto;
+  max-width: 68rem;
+  padding: 0 4rem;
 }
 
 .text__wrap--first {
@@ -511,6 +541,8 @@ code {
 }
 
 .text__wrap--narrow {
+  margin: 0 auto;
+  max-width: 68rem;
   padding: 0 4rem;
 }
 

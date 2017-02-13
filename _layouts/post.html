@@ -2,16 +2,18 @@
 layout: default
 ---
 <header class="header header--feature header--{{ page.highlight }}">
-  <h1 class="title--{% if page.contrast == 'light' %}light{% else %}dark{% endif %}">{{ page.title }}</h1>
-  <p>{{ page.hook }}</p>
-  {% if page.link %}<p><a href="{page.link}" target="_blank">Visit the Website &rarr;</a></p>{% endif %}
-  <div class="arrow__icon__wrap header__icon header__icon--top">
-    <a href="/work" title="Tap to Return to all work">
-      <div class="arrow__icon arrow__icon--left">
-        <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
-        <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
-      </div>
-    </a>
+  <div class="header__content">
+    <h1 class="title--{% if page.contrast == 'light' %}light{% else %}dark{% endif %}">{{ page.title }}</h1>
+    <p>{{ page.hook }}</p>
+    {% if page.link %}<p><a href="{page.link}" target="_blank">Visit the Website &rarr;</a></p>{% endif %}
+    <div class="arrow__icon__wrap header__icon header__icon--top">
+      <a href="/work" title="Tap to Return to all work">
+        <div class="arrow__icon arrow__icon--left">
+          <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
+          <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
+        </div>
+      </a>
+    </div>
   </div>
 </header>
 <article>
