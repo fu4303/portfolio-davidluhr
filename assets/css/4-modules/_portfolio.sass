@@ -11,6 +11,9 @@
     max-width: 68rem
     padding: 0
 
+    @media only screen and (min-width: 1200px)
+      max-width: 96rem
+
     &:before, &:after
       content: " "
       display: table
@@ -25,9 +28,16 @@
     position: relative
     width: 28rem
 
+    @media only screen and (min-width: 1200px)
+      height: 27rem
+      width: 42rem
+
     &:first-of-type
       margin-top: 14rem
       margin-left: 0
+
+      @media only screen and (min-width: 1200px)
+        margin-top: 21rem
 
     &--left
       @media only screen and (min-width: 560px)
@@ -36,11 +46,17 @@
       @media only screen and (min-width: 610px)
         margin-top: 14rem
 
+      @media only screen and (min-width: 1200px)
+        margin-top: 21rem
+
     &--right
       margin-left: auto
 
       @media only screen and (min-width: 610px)
         margin-top: 28rem
+
+      @media only screen and (min-width: 1200px)
+        margin-top: 42rem
 
     &--thistle
       background: $thistle
@@ -63,29 +79,55 @@
     top: -10rem
     width: 20rem
 
+    @media only screen and (min-width: 1200px)
+      height: 30rem
+      top: -15rem
+      width: 30rem
+
     &--left
       left: 2rem
 
+      @media only screen and (min-width: 1200px)
+        left: 3rem
+
     &--right
       right: 2rem
+
+      @media only screen and (min-width: 1200px)
+        right: 3rem
 
   &__img
     filter: drop-shadow($box-shadow)
     position: absolute
     width: 23.8rem
 
+    @media only screen and (min-width: 1200px)
+      width: 35.7rem
+
     &--left
       left: 1rem
 
+      @media only screen and (min-width: 1200px)
+        left: 1.5rem
+
     &--right
       right: 1rem
+
+      @media only screen and (min-width: 1200px)
+        right: 1.5rem
 
     &--top
       top: -1rem
       z-index: 1
 
+      @media only screen and (min-width: 1200px)
+        top: -1.5rem
+
     &--bottom
       top: 3rem
+
+      @media only screen and (min-width: 1200px)
+        top: 4.5rem
 
   &__link
     align-items: center
@@ -101,11 +143,22 @@
     transition: background $transition
     width: 28rem
 
+    @media only screen and (min-width: 1200px)
+      bottom: -8.3rem
+      height: 16.5rem
+      width: 42rem
+
     &--left
       left: 2rem
 
+      @media only screen and (min-width: 1200px)
+        left: 3rem
+
     &--right
       right: 2rem
+
+      @media only screen and (min-width: 1200px)
+        right: 3rem
 
     &:hover
       background: $purple--darker
@@ -124,3 +177,7 @@
     margin-bottom: 0
     transition: color $transition
     width: 17rem
+
+    @media only screen and (min-width: 1200px)
+      font-size: 2.2rem
+      width: 25.5rem
