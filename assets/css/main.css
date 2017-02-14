@@ -14,6 +14,7 @@ body {
   font-family: "Roboto",sans-serif;
   color: #aeb0b2;
   margin: 0;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
@@ -335,6 +336,10 @@ code {
   font-size: 1.4rem;
   padding-top: 2rem;
   text-align: center;
+}
+
+.svg__container {
+  max-width: 40rem;
 }
 
 .logo {

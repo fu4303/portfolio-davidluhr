@@ -1,9 +1,11 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
-var sass = require('gulp-sass');
-var prefix = require('gulp-autoprefixer');
-var cp = require('child_process');
-var image = require('gulp-image');
+var gulp = require('gulp'),
+  browserSync = require('browser-sync'),
+  sass = require('gulp-sass'),
+  prefix = require('gulp-autoprefixer'),
+  cp = require('child_process'),
+  image = require('gulp-image'),
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglify');
 
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -12,7 +14,7 @@ var messages = {
 
 gulp.task('jekyll-build', function (done) {
   browserSync.notify(messages.jekyllBuild);
-  return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
+  return cp.spawn(jekyll, ['build'], {stdio: 'inherit'})
     .on('close', done);
 });
 
@@ -43,6 +45,14 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('assets/css'));
 });
 
+gulp.task('scripts', function() {
+  return gulp
+    .src('assets/js/modules/*.js')
+    .pipe(concat('main.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('assets/js'));
+});
+
 gulp.task('image', function() {
   return gulp.src('assets/img/source/*')
     .pipe(image())
@@ -51,7 +61,8 @@ gulp.task('image', function() {
 
 gulp.task('watch', function () {
   gulp.watch('assets/css/**/*.sass', ['sass']);
+  gulp.watch('assets/js/modules/*.js', ['scripts']);
   gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
 });
 
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['sass', 'scripts', 'browser-sync', 'watch']);
