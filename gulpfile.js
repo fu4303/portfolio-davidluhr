@@ -3,7 +3,6 @@ var browserSync = require('browser-sync');
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
 var cp = require('child_process');
-var pug = require('gulp-pug');
 var image = require('gulp-image');
 
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -44,12 +43,6 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('assets/css'));
 });
 
-gulp.task('pug', function () {
-  return gulp.src('_pugfiles/*.pug')
-    .pipe(pug())
-    .pipe(gulp.dest('_includes'));
-});
-
 gulp.task('image', function() {
   return gulp.src('assets/img/source/*')
     .pipe(image())
@@ -58,7 +51,6 @@ gulp.task('image', function() {
 
 gulp.task('watch', function () {
   gulp.watch('assets/css/**/*.sass', ['sass']);
-  gulp.watch('_pugfiles/*.pug', ['pug']);
   gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
 });
 
