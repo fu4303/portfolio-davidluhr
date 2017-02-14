@@ -3,7 +3,7 @@
     <img src="{{ site.baseurl}}/assets/img/final/{{ work-item.image-top }}" alt="" class="portfolio__img portfolio__img--top {% cycle 'portfolio__img--left', 'portfolio__img--left', 'portfolio__img--right', 'portfolio__img--right' %}">
     <img src="{{ site.baseurl}}/assets/img/final/{{ work-item.image-bottom }}" alt="" class="portfolio__img portfolio__img--bottom {% cycle 'portfolio__img--left', 'portfolio__img--left', 'portfolio__img--right', 'portfolio__img--right' %}">
   </div>
-  <a href="{{ site.baseurl}}/{{ work-item.url }}" class="portfolio__link {% cycle 'portfolio__link--left', 'portfolio__link--right' %}" title="Tap to View Project">
+  <a href="{{ site.baseurl}}{{ work-item.url }}" class="portfolio__link {% cycle 'portfolio__link--left', 'portfolio__link--right' %}" title="Tap to View Project">
     <p class="portfolio__title">{{ work-item.portfolio-title }}</p>
     <ul class="badges badges--narrow">
       {% for skill in work-item.skills limit:2 %}
