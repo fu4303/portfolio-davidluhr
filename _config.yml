@@ -1,6 +1,6 @@
 name: David Luhr
 markdown: kramdown
-exclude: ["node_modules", "gulpfile.js", "package.json", "assets/img/source"]
+exclude: ["node_modules", "gulpfile.js", "package.json", "assets/img/source", "assets/css/main.sass"]
 permalink: pretty
 collections:
   work:
