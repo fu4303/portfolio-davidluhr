@@ -2,7 +2,25 @@
 <ul class="portfolio__list clearfix">
   {% for work-item in work-items %}
     {% if work-item.type == "personal" %}
-      {% include portfolio-list-item.html %}
+      <li class="portfolio__item {% cycle 'portfolio__item--left', 'portfolio__item--right' %} portfolio__item--{{ work-item.highlight }}">
+        <div class="portfolio__feature portfolio__feature--rhombus {% cycle 'portfolio__feature--rhombus--left', 'portfolio__feature--rhombus--right' %}">
+          <img src="{{ site.baseurl}}/assets/img/final/{{ work-item.image-top }}" alt="" class="portfolio__img--rhombus">
+        </div>
+        <a href="{{ site.baseurl}}{{ work-item.url }}" class="portfolio__link {% cycle 'portfolio__link--left', 'portfolio__link--right' %}" title="Tap to View Project">
+          <p class="portfolio__title">{{ work-item.portfolio-title }}</p>
+          <ul class="badges badges--narrow">
+            {% for skill in work-item.skills limit:2 %}
+              <li class="badge">{{ skill }}</li>
+            {% endfor %}
+          </ul>
+          <div class="arrow__icon__wrap">
+            <div class="arrow__icon arrow__icon--right">
+              <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
+              <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
+            </div>
+          </div>
+        </a>
+      </li>
     {% endif %}
   {% endfor %}
 </ul>

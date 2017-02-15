@@ -70,19 +70,48 @@
     &--red
       background: $red
 
-  &__feature
-    background: $purple--deep
-    box-shadow: $box-shadow
-    border-radius: 50%
-    height: 20rem
-    position: absolute
-    top: -10rem
-    width: 20rem
+    &--royal
+      background: $royal
 
-    @media only screen and (min-width: 1200px)
-      height: 30rem
-      top: -15rem
-      width: 30rem
+    &--mint
+      background: $mint
+
+  &__feature
+
+    &--circle
+      background: $purple--deep
+      box-shadow: $box-shadow
+      border-radius: 50%
+      height: 20rem
+      position: absolute
+      top: -10rem
+      width: 20rem
+
+      @media only screen and (min-width: 1200px)
+        height: 30rem
+        top: -15rem
+        width: 30rem
+
+    &--rhombus
+      border-radius: 0
+      box-shadow: $box-shadow--right
+      height: 15rem
+      top: -7.5rem
+      overflow: hidden
+      position: absolute
+      transform: rotate(45deg)
+      width: 15rem
+
+      @media only screen and (min-width: 1200px)
+        height: 25rem
+        top: -12.5rem
+        width: 25rem
+
+      &--left
+        left: 8rem
+
+      &--right
+        right: 8rem
 
     &--left
       left: 2rem
@@ -128,6 +157,18 @@
 
       @media only screen and (min-width: 1200px)
         top: 4.5rem
+
+  &__img--rhombus
+    height: 21.3rem
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%) rotate(-45deg)
+    position: absolute
+    width: 21.3rem
+
+    @media only screen and (min-width: 1200px)
+      height: 35.4rem
+      width: 35.4rem
 
   &__link
     align-items: center
