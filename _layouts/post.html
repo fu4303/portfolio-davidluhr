@@ -5,7 +5,7 @@ layout: default
   <div class="header__content">
     <h1 class="title--{% if page.contrast == 'light' %}light{% else %}dark{% endif %}">{{ page.portfolio-title }}</h1>
     <p>{{ page.hook }}</p>
-    {% if page.link %}<p><a href="{page.link}" target="_blank">Visit the Website &rarr;</a></p>{% endif %}
+    {% if page.link %}<p><a href="{{ page.link }}" target="_blank">Visit the Website &rarr;</a></p>{% endif %}
     <div class="arrow__icon__wrap header__icon header__icon--top">
       <a href="/work" title="Tap to Return to all work">
         <div class="arrow__icon arrow__icon--left">
