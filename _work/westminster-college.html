@@ -38,12 +38,12 @@ skills:
 
 <section class="text__wrap">
   <h2>Overview</h2>
-  <p>I oversaw all aspects of the year-long overhaul for Westminster College's website to solve long-standing content and technical bloat, as well as serious user experience issues. The new website has facilitated a 15% in enrollment applications, as well as a 22% drop in the global bounce rate.</p>
+  <p>I oversaw all aspects of the year-long overhaul for Westminster College's website. My main goal was to solve long-standing content and technical bloat, as well as serious user experience issues. Thanks to an intensive process that addressed these challenges, the new website has facilitated a 15% increase in enrollment applications, as well as a 22% drop in the global bounce rate.</p>
 </section>
 
 <section class="text__wrap">
   <h2>Problem</h2>
-  <p>Westminster College was suffering from declining enrollment and a confused branding identity. Symptomatic of this was the college’s website, which had grown over a decade of neglect to almost 9,000 pages of largely abandoned and broken content. Behind the content was an aging, in-house content management system with permissions for over 200 individuals. The result of this was an unpredictable information architecture based on internal organizational structure and absent oversight.</p>
+  <p>Westminster College was suffering from declining enrollment and a confused brand identity. Symptomatic of this was the college’s website, which had grown over a decade of neglect to almost 9,000 pages of largely abandoned and broken content. Behind the content was an aging, in-house content management system with editing permissions for over 200 individuals. The result of this was an unpredictable information architecture based on internal organizational structure and absent oversight.</p>
   <p>In addition to the coat bloat and lacking web governance was an insurmountable backlog of technical debt. The CSS for the site alone had over 14,000 lines of code, with an untraceable web of overwrites, <code>!important</code> flags, and extremely abusive use of specificity in its selectors.</p>
   <p>Needless to say, the website had a compromised user experience, riddled with accessibility issues. When I inherited the Senior Web Designer position in mid-2015, the college was definitely feeling the pains of the resulting loss in reputation and usability.</p>
 </section>
@@ -69,7 +69,7 @@ skills:
 <section class="text__wrap">
   <h2>Constraints</h2>
   <p>As the sole full-time staff overseeing the website, I was elated to gain the support of three backend developers whose positions were reorganized to support the website just as I was hired. With no dedicated budget for this project, we set out to eliminate existing subscriptions and services to fund any technology needs relating to the new website.</p>
-  <p>We quickly knew that we would need to depart entirely from the existing CMS and spend the majority of our time addressing the massive content bloat. As we introduced the organization to Agile/Scrum development sprints, we were given a firm deadline a full year in advance to coincide with the project launch of the school’s new brand. It was up to us to adapt Agile methodologies and prove to key stakeholders that even with a waterfall deadline, we could launch on-target.</p>
+  <p>We quickly knew that we would need to depart entirely from the existing CMS and spend the majority of our time addressing the massive content bloat. As we introduced the organization to Agile/Scrum development sprints, we were given a firm deadline a full year in advance to coincide with the launch of the school’s new brand. It was up to us to adapt Agile methodologies and prove to key stakeholders that even with a waterfall deadline, we could launch on-target.</p>
 </section>
 
 <section class="text__wrap">
@@ -95,14 +95,14 @@ skills:
   <figcaption class="image__caption">User flow mapping proved invaluable in scoping audience-specific content hubs</figcaption>
 </figure>
 <section class="text__wrap">
-  <p>After six months of meeting with content owners, determining what to keep, and then cleaning every line of underlying markup to ensure only valid, semantic, and accessible HTML was going to be migrated, I had managed to consolidate 8,900 pages down to 450 purposeful, student-facing pages of surviving content. To top it off, I got sign-off from leadership to limit access only to the web team and introduce an open source ticketing system to field website update requests and ensure only trained professionals implemented necessary changes.</p>
+  <p>After six months of meeting with content owners, determining what to keep, and then cleaning every line of underlying markup to ensure only valid, semantic, and accessible HTML was going to be migrated, I had managed to consolidate 8,900 pages down to 450 purposeful, student-facing pages of surviving content. To top it off, I got sign-off from leadership to limit access only to the web team. I introduced an open source ticketing system to field website update requests and ensure only trained professionals implemented necessary changes.</p>
 </section>
 
 <section class="text__wrap">
   <h3>Design</h3>
   <h4>Interface Inventory</h4>
-  <p>Mirroring the lack of content strategy and audience focus, the website presented users with an inconsistent visual experience and user interface that compromised the college’s reputation. To diagnose this issue directly, I conducted an interface inventory, following the process proposed by Brad Frost.</p>
-  <p>Faced with 20 different headings, 30 different link styles, 40 different buttons, and dozens of banner images with all ranges of color and typography, it was clear we had a branding dilution emergency, caused by a the lack of a visual style guide or proper web governance.</p>
+  <p>Mirroring the lack of content strategy and audience focus, the website presented users with an inconsistent visual experience and user interface that compromised the college’s reputation. To diagnose this issue directly, I conducted an interface inventory, following the <a href="http://bradfrost.com/blog/post/interface-inventory/" target="_blank">process proposed by Brad Frost</a>.</p>
+  <p>Faced with over 20 different headings, 30 different link styles, 40 different buttons, and dozens of banner images with all ranges of color and typography, it was clear we had a brand identity emergency, caused by a the lack of a visual style guide or proper web governance.</p>
 </section>
 <figure>
   <img class="image--banner" src="{{ site.baseurl}}/assets/img/final/westminster-college-interface-inventory.jpg" alt="Interface inventory of buttons on the old website with over 40 variations">
@@ -124,7 +124,7 @@ skills:
   <h3>Development</h3>
   <p>We quickly decided to move to an entirely new CMS and do away with the outdated, in-house solution that presented an insurmountable backlog of technical debt. We chose Progress Sitefinity as our CMS of choice to coincide with the three backend developers’ preference for MVC.NET.</p>
   <p>As we familiarized ourselves with the new system, I set up a separate Git repository to handle all of the visual design and interaction of the website. This allowed me to take full advantage of modern front-end tools, including Pug.JS, SASS, and Gulp.JS. Abstracting these aspects of the site development would prove invaluable in the future when we brought several development environments under the same CSS and JS dependencies to unite the UX/UI for all of our web applications.</p>
-  <p>The entire website was developed with a mobile-first approach to align with our audiences’ heavy uses of phones as their preferred device. I developed the site with a SMACSS mindset, modularizing all components of the UI and design language to support the future creation of a true pattern library. I also refactored both Bootstrap and Sitefinity CSS source files to only import necessary modules and improve load times.</p>
+  <p>The entire website was developed with a mobile-first approach to align with our audiences’ heavy uses of phones as their preferred device. I developed the site with a SMACSS mindset, modularizing all components of the UI and design language to support the future creation of a true pattern library. I also refactored both Bootstrap and Sitefinity CSS source files to only import necessary modules, reduce server requests, and improve load times.</p>
 </section>
 
 <section class="text__wrap">
