@@ -1,0 +1,23 @@
+.form
+
+  &__label, &__input, &__textarea
+    display: block
+
+  &__input, &__textarea
+    background: $purple--deep
+    border: none
+    border-bottom: 0.2rem solid $color
+    border-radius: $border-radius
+    color: white
+    font:
+      family: $sans
+      size: $base-font-size
+    margin-bottom: 2rem
+    padding: 1rem
+    width: 24rem
+
+    &:focus
+      background: $purple--darker
+
+    @media only screen and (min-width: 560px)
+      width: 40rem
