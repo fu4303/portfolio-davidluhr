@@ -37,12 +37,8 @@ gulp.task('sass', function () {
       outputStyle: 'compressed'
     }))
     .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-    .pipe(gulp.dest('_site/assets/css'))
+    .pipe(gulp.dest('_includes'))
     .pipe(browserSync.reload({stream:true}))
-    .pipe(sass({
-      outputStyle: 'expanded'
-    }))
-    .pipe(gulp.dest('assets/css'));
 });
 
 gulp.task('scripts', function() {
@@ -50,7 +46,7 @@ gulp.task('scripts', function() {
     .src('assets/js/modules/*.js')
     .pipe(concat('main.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('assets/js'));
+    .pipe(gulp.dest('_includes'));
 });
 
 gulp.task('image', function() {

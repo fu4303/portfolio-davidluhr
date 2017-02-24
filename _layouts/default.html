@@ -14,7 +14,9 @@
     <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicons/favicon.ico?v=1">
     <meta name="msapplication-config" content="{{ site.baseurl }}/assets/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#88f9ae">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+    <style>
+      {% include main.css %}
+    </style>
   </head>
   <body>
     {% include google-analytics.html %}
@@ -28,7 +30,8 @@
         <p><small>&copy; 2017 David Luhr</small></p>
       </div>
     </footer>
-    <script src="{{ site.baseurl }}/assets/js/main.min.js">
+    <script>
+      {% include main.min.js %}
     </script>
   </body>
 </html>
