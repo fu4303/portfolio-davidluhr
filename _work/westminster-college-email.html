@@ -33,19 +33,19 @@ skills:
 
 <section class="text__wrap">
   <h2>Overview</h2>
-  <p>I was the lead developer of Westminster College's new email templating environment. My main goal was to create a design component library that encourages strong reusability across 6 complex layouts, with a focus on mobile-first design, bulletproof compatibility across all email clients, and striking visuals.</p>
+  <p>I was the lead developer of Westminster College&rsquo;s new email templating environment. My main goal was to create a design component library that encourages strong reusability across 6 complex layouts, with a focus on mobile-first design, bulletproof compatibility across all email clients, and striking visuals.</p>
 </section>
 
 <section class="text__wrap">
   <h2>Problem</h2>
   <p>Westminster College migrated to a new enrollment CRM in 2016. With this migration came a steep learning curve for the enrollment team and the pains of starting anew with no existing email templates or communication flows.</p>
-  <p>Over the following year, the team introduced stop-gap measures to communicate with prospective students while focusing on improving productivity in the new CRM. After successfully launching and rapidly iterating on the current marketing website for the college, I shifted focus to tackling the enrollment team's email marketing needs.</p>
+  <p>Over the following year, the team introduced stop-gap measures to communicate with prospective students while focusing on improving productivity in the new CRM. After successfully launching and rapidly iterating on the current marketing website for the college, I shifted focus to tackling the enrollment team&rsquo;s email marketing needs.</p>
 </section>
 
 <section class="text__wrap">
   <h2>Audience</h2>
-  <p>All prospective student audiences would benefit from a new email development environment and template suite, but we needed to prioritize our largest audience for the initial launch.</p>
-  <p>High school students, non-traditional students, and other individuals who would be starting their first-year, undergraduate studies at Westminster were the sole audience for this project, with increasingly more specific audiences to follow in future projects.</p>
+  <p>A new email development environment and template suite would add value to all prospective student audiences, responsive emails, but we needed to prioritize our largest audience for the initial launch.</p>
+  <p>High school students, non-traditional students, and other individuals who would be starting their first-year undergraduate studies at Westminster were the sole audience for this project, with more niche audiences to follow in future projects.</p>
   <p>We assumed this audience would mainly view emails on mobile devices, particularly on iPhones. We also knew that the emails needed to be vastly different and more visually striking than those of competitor institutions, so image-rich, narrative experiences were essential.</p>
 </section>
 
@@ -61,10 +61,10 @@ skills:
   <h3>Researching Frameworks</h3>
   <p>Having a component-driven codebase with a templating language well-suited for HTML email was a priority as I started researching potential approaches.</p>
   <p>I dove deep into the work of Dan Denney, who is widely regarded as an expert in modern HTML email development. I poured through his <a href="https://github.com/dandenney/emayll">emayll</a> and <a href="https://github.com/dandenney/eMMail">eMMail</a> repos on GitHub to see how he modified the Jekyll and Middleman static-site generators for his email development needs.</p>
-  <p>From here, I built several experimental projects with various static-site generator solutions, familiarizing myself with each solution's syntax, featureset, and limitations.</p>
-  <p>After struggling to find a great fit for this project's needs, I was thrilled to discover <a href="https://foundation.zurb.com/emails.html">Zurb's Foundation for Emails</a> framework. This framework offered the perfect balance of extensibility and magic, allowing me to quickly develop email components and templates while taking care of automatically generating the resultingly nightmarish HTML of table-based layouts.</p>
+  <p>From here, I built several experimental projects with various static-site generator solutions, familiarizing myself with each solution&rsquo;s syntax, featureset, and limitations.</p>
+  <p>After struggling to find a great fit for this project&rsquo;s needs, I was thrilled to discover <a href="https://foundation.zurb.com/emails.html">Zurb&rsquo;s Foundation for Emails</a> framework. This framework offered the perfect balance of extensibility and magic, allowing me to quickly develop email components and templates while taking care of automatically generating the resultingly nightmarish HTML of table-based layouts.</p>
   <h3>Gridding</h3>
-  <p>With ambitious target visuals for the primary templates, I first had to carefully plan the underlying table structure of each layout. I started by blocking the major layout components, and then breaking down their internal structure. Although I wasn't sure if such complex, responsive layouts could be achieved in HTML email, this step in the process proved invaluable when I had to start coding.</p>
+  <p>With ambitious target visuals for the primary templates, I first had to carefully plan the underlying table structure of each layout. I started by blocking the major layout components, and then breaking down their internal structure. Although I wasn&rsquo;t sure if such complex, responsive layouts could be achieved in HTML email, this step in the process proved invaluable when I had to start coding.</p>
 </section>
 
 <figure>
@@ -75,10 +75,10 @@ skills:
 <section class="text__wrap">
   <h3>Development</h3>
   <p>I focused development on building each design component, from most complex to least complex, which I could then reuse across multiple templates. Following the gridding exercise, the footer proved to be the most complex, with asymmetrical columns, a tiled image background variant, and sub-grids of contact information and social media icons.</p>
-  <p>Next, I tackled some of the template-specific content bodies, which introduced new challenges, such as a tiled logo background along the full height of the content, a “watermark” logo beneath another content body, and unique typographic layouts and treatments for headlines.</p>
-  <p>With each of these initial explorations, I started to grasp workarounds for achieving these complex mobile-first, responsive layouts within table-based code. Thanks to Foundation for Email’s abstraction of the final HTML code, I was able to code the layouts much more manageable components and focus on composition instead of table cell quirks.</p>
+  <p>Next, I tackled some of the template-specific content bodies, which introduced new challenges, such as a tiled logo background along the full height of the content, a &ldquo;watermark&rdquo; logo beneath another content body, and unique typographic layouts and treatments for headlines.</p>
+  <p>With each of these initial explorations, I started to grasp workarounds for achieving these complex mobile-first, responsive layouts within table-based code. Thanks to Foundation for Email&rsquo;s abstraction of the final HTML code, I was able to code the layouts much more manageable components and focus on composition instead of table cell quirks.</p>
   <p>After completing proof-of concept versions of the image grids and call-to-action features, I had arrived at a set of flexible templates and components that could be conveniently recombined to build any of our planned emails.</p>
-  <p>With the help of our backend developers, we cloud hosted the flat-file build of the development codebase with continuous delivery to show the templates and latest emails to internal stakeholders. We also introduced some custom Gulp tasks to optimize images, expose each email’s final source code, and pipe completed emails into our CRM via an API.</p>
+  <p>With the help of our backend developers, we cloud hosted the flat-file build of the development codebase with continuous delivery to show the templates and latest emails to internal stakeholders. We also introduced some custom Gulp tasks to optimize images, expose each email&rsquo;s final source code, and pipe completed emails into our CRM via an API.</p>
 </section>
 
 <figure>
@@ -88,7 +88,7 @@ skills:
 
 <section class="text__wrap">
   <h3>Compatability Testing</h3>
-  <a>Once I had confirmed that each layout was indeed possible in HTML email, I used <a href="https://litmus.com/">Litmus</a> to test each template and layout component across all 70+ available email clients. To my surprise, there were only a handful of CSS bugs and layout issues to resolve, thanks to Foundation for Emails’ underlying magic in generating robust and clean markup.</p>
+  <a>Once I had confirmed that each layout was indeed possible in HTML email, I used <a href="https://litmus.com/">Litmus</a> to test each template and layout component across all 70+ available email clients. To my surprise, there were only a handful of CSS bugs and layout issues to resolve, thanks to Foundation for Emails&rsquo; underlying magic in generating robust and clean markup.</p>
   <p>After a half-day of cleanup, compatibility testing was complete, and we spent the following 6 weeks of the project building each stage of the communication flow in weekly sprints.</p>
 </section>
 
@@ -125,8 +125,8 @@ skills:
 
 <section class="text__wrap">
   <h2>Retrospective</h2>
-  <p>This project was hugely successful and exceeded my expectations for what was possible with widely-compatible HTML email layouts. The templates I built in this project are genuinely some of the most complicated that I’ve seen, and definitely set our email marketing apart from very traditional competitors.</p>
-  <p>Having a templating architecture was the perfect solution for sustainable email development. The codebase has proven to scale well as we’ve moved on to additional audiences and also built one-off email series more reactively.</p>
+  <p>This project was hugely successful and exceeded my expectations for what was possible with widely-compatible HTML email layouts. The templates I built in this project are genuinely some of the most complicated that I&rsquo;ve seen, and definitely set our email marketing apart from very traditional competitors.</p>
+  <p>Having a templating architecture was the perfect solution for sustainable email development. The codebase has proven to scale well as we&rsquo;ve moved on to additional audiences and also built one-off email series more reactively.</p>
   <p>The Zurb team deserves major recognition for creating such an incredibly useful framework for email development. Building a new email from scratch requires little more than some top-matter variables and only a few include statements around the actual copy, but the final result is hundreds of lines of complex table elements and inline styles.</p>
   <p>That being said, as my development stack is strongly bending towards React, I would probably explore a React-based solution, such as <a href="https://mjml.io/">MJML</a>, to more fully realize component-driven layouts, as my workaround for creating opening and closing Panini/Handlebars includes to inject content inside of partials felt like a bit of a hack.</p>
 </section>
