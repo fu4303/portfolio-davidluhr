@@ -1,4 +1,8 @@
 {% assign work-items = site.work | sort:"order" %}
+<ul class="portfolio__list portfolio__list--hidden clearfix">
+  <li class="hidden portfolio__item {% cycle 'portfolio__item--left', 'portfolio__item--right' %} portfolio__item--{{ work-item.highlight }}">
+  </li>
+</ul>
 <ul class="portfolio__list clearfix">
   {% for work-item in work-items %}
     {% if work-item.type == "personal" %}
