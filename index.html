@@ -1,7 +1,7 @@
 ---
 layout: default
-title: David Luhr | Web and UX Design | Front-End Development
-description: David Luhr creates and codes compelling experiences with his background in web/UX design and front-end development. Check out his work and process.
+title: David Luhr | Expert HTML, CSS, accessibility, and product design
+description: David Luhr creates and codes compelling experiences with his background in Expert HTML, CSS, accessibility, and product design. Check out his work and process.
 ---
 <header class="header">
   <div class="header__content">
@@ -9,9 +9,10 @@ description: David Luhr creates and codes compelling experiences with his backgr
       Hey there,<br>
       I'm David Luhr.
     </h1>
-    <p>I design compelling experiences and code them, too.</p>
+    <p>I'm an expert HTML, CSS, accessibility, and product design. I design compelling experiences and code them, too.</p>
+    <p>Check out <a href="/work">my work</a>, learn more <a href="/about">about me</a>, or watch my process on my YouTube channel, <a href="https://youtube.com/buildux" target="_blank" rel="nofollow">Build UX</a>.</p>
     <div class="arrow__icon__wrap header__icon header__icon--bottom">
-      <a href="#work" title="Tap to Scroll Down">
+      <a href="#latest" title="Tap to Scroll Down">
         <div class="arrow__icon arrow__icon--down">
           <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
           <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
@@ -21,7 +22,28 @@ description: David Luhr creates and codes compelling experiences with his backgr
   </div>
 </header>
 <main class="main">
-  <h2 class="text__wrap" id="work">Featured Work</h2>
+  <h2 class="text__wrap" id="latest">Latest Project</h2>
+  <ul class="portfolio__list clearfix">
+    <li class="portfolio__item portfolio__item--left portfolio__item--cobalt">
+      <div class="portfolio__feature portfolio__feature--circle {% cycle 'portfolio__feature--left', 'portfolio__feature--right' %}">
+        <img src="{{ site.baseurl}}/assets/img/final/build-ux-thumb.png" alt="Thumbnail images of Build UX YouTube videos" class="portfolio__banner">
+      </div>
+      <a href="{{ site.baseurl}}/build-ux" class="portfolio__link portfolio__link--left" title="Tap to View Project">
+        <p class="portfolio__title">Build UX YouTube Channel</p>
+        <ul class="badges badges--narrow">
+          <li class="badge">Design Systems</li>
+          <li class="badge">UX Development</li>
+        </ul>
+        <div class="arrow__icon__wrap">
+          <div class="arrow__icon arrow__icon--right">
+            <div class="arrow__icon__chevron arrow__icon__chevron--1"></div>
+            <div class="arrow__icon__chevron arrow__icon__chevron--2"></div>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+  <h2 class="text__wrap">Featured Work</h2>
   {% include professional-list.html %}
   <section class="text__wrap">
     <h2>Looking for More?</h2>
