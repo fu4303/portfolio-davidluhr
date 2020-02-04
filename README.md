@@ -2,8 +2,5 @@
 
 ## Built With
 
-- Jekyll
-- PugJS
-- Sass
-- GulpJS
-- GitHub
+- 11ty
+- GitHub page

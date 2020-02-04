@@ -1,0 +1,42 @@
+---
+layout: layouts/home.njk
+title: David Luhr | Expert HTML, CSS, JS, accessibility, and UX design
+description: David Luhr creates and codes compelling experiences with his background in Expert HTML, CSS, JS, accessibility, and UX design. Check out his work and process.
+---
+
+<h1 class="screen-reader-only">David Luhr</h1>
+<svg class="hero-logotype" viewBox="0 0 483 95" width="483" height="95" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="M18.08.6v76.56h42.768V93H.656V.6H18.08zM143.792.6v60.456c0 5.72 1.628 10.208 4.884 13.464 3.256 3.168 7.876 4.752 13.86 4.752 5.984 0 10.604-1.584 13.86-4.752 3.256-3.256 4.884-7.744 4.884-13.464V.6h17.424v59.928c0 10.648-3.212 19.052-9.636 25.212-6.424 6.072-15.268 9.108-26.532 9.108s-20.108-3.036-26.532-9.108c-6.424-6.16-9.636-14.564-9.636-25.212V.6h17.424zM287.705.6v38.148h34.848V.6h17.424V93h-17.424V54.588h-34.848V93h-17.424V.6h17.424zM482.215 29.64c0 6.952-1.848 12.892-5.544 17.82-3.608 4.84-8.448 8.14-14.52 9.9L481.159 93h-19.668l-16.896-34.32h-15.18V93h-17.424V.6h40.656c5.808 0 10.912 1.232 15.312 3.696 4.488 2.376 7.964 5.764 10.428 10.164 2.552 4.312 3.828 9.372 3.828 15.18zm-52.8 13.332h21.516c4.136 0 7.48-1.188 10.032-3.564 2.552-2.464 3.828-5.72 3.828-9.768 0-4.048-1.276-7.26-3.828-9.636-2.552-2.376-5.896-3.564-10.032-3.564h-21.516v26.532zM40.508.8V19h6.24c4.888 0 7.488-2.496 7.488-7.384V8.184c0-4.888-2.6-7.384-7.488-7.384h-6.24zm3.432 3.12h2.86c2.756 0 4.004 1.508 4.004 4.16v3.64c0 2.652-1.248 4.16-4.004 4.16h-2.86V3.92zM59.789.8L54.693 19h3.51l1.092-4.056h6.344L66.73 19h3.51L65.145.8h-5.356zm.338 11.024l2.21-8.216h.26l2.21 8.216h-4.68zM69.165.8l5.07 18.2h5.408L84.713.8h-3.51L77.07 16.192h-.26L72.675.8h-3.51zM86.262.8V19h3.432V.8h-3.432zM92.711.8V19h6.24c4.888 0 7.488-2.496 7.488-7.384V8.184c0-4.888-2.6-7.384-7.488-7.384h-6.24zm3.432 3.12h2.86c2.756 0 4.004 1.508 4.004 4.16v3.64c0 2.652-1.248 4.16-4.004 4.16h-2.86V3.92z" />
+</svg>
+<div class="hero-gradient" aria-hidden="true"></div>
+
+<main class="main" id="main">
+  <div class="intro">
+    <p class="t-body">I'm an expert in HTML, CSS, JavaScript, accessibility, and UX design. I design compelling experiences and code them, too.</p>
+    <p class="t-body">Check out <a class="t-link" href="/work">my work</a>, learn more <a class="t-link" href="/about">about me</a>, or watch my process on my YouTube channel, <a class="t-link" href="https://youtube.com/buildux" target="_blank">Build UX</a>.</p>
+  </div>
+  <section class="articles-section" aria-labelledby="#articles">
+    <h2 class="t-section-heading" id="articles">Articles</h2>
+    <div class="media-list">
+      <article class="media">
+        <h3 class="t-body media__heading">
+          <a class="media__link" href="https://venturebeat.com/2019/11/03/accessibility-is-an-opportunity-not-a-burden/" target="_blank">Accessibility is an opportunity, not a burden</a>
+        </h3>
+        <svg class="media__icon" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M14 2h8v8h-2V5.414L7.707 17.707l-1.414-1.414L18.586 4H14V2zM2 4h9v2H4v14h14v-7h2v9H2V4z"/>
+        </svg>
+      </article>
+      <article class="media">
+        <h3 class="t-body media__heading">
+          <a class="media__link" href="https://dockyard.com/blog/2019/10/30/how-to-collaborate-remotely-and-never-sit-in-a-cold-meeting-room-again" target="_blank">How to Collaborate Remotely (co-authored)</a>
+        </h3>
+        <svg class="media__icon" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M14 2h8v8h-2V5.414L7.707 17.707l-1.414-1.414L18.586 4H14V2zM2 4h9v2H4v14h14v-7h2v9H2V4z"/>
+        </svg>
+      </article>
+  </section>
+  <section class="case-studies-section" aria-labelledby="#caseStudies">
+    <h2 class="t-section-heading" id="caseStudies">Case studies</h2>
+    {% include 'case-studies.njk' %}
+  </section>
+</main>

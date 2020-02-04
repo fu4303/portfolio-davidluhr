@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ renderData.title or title or metadata.title }}</title>
+    <meta name="description" content="{{ renderData.description or description or metadata.description }}">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#99a3ff">
+    <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#99a3ff">
+  </head>
+  <body{%if bodyClass %} class="{{ bodyClass }}"{% endif %} id="app" data-theme="light">
+    <a class="t-body skip-to-main" href="#main">Skip to main content</a>
+    <button class="theme-toggle" type="button" data-theme-toggle>
+      <svg class="theme-toggle__icon" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-theme-toggle-moon>
+        <path d="M9 15a6 6 0 005.47-8.47 6.001 6.001 0 11-7.94 7.94c.753.34 1.59.53 2.47.53z"/>
+      </svg>
+      <svg class="theme-toggle__icon" viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" hidden aria-hidden="true" data-theme-toggle-sun>
+        <path d="M18 12a6 6 0 11-12 0 6 6 0 0112 0zM11 2a1 1 0 112 0v2a1 1 0 11-2 0V2zM22 11a1 1 0 110 2h-2a1 1 0 110-2h2zM13 22a1 1 0 11-2 0v-2a1 1 0 112 0v2zM2 13a1 1 0 110-2h2a1 1 0 110 2H2zM4.222 5.636a1 1 0 111.414-1.414L7.05 5.636A1 1 0 115.636 7.05L4.222 5.636zM18.364 4.222a1 1 0 111.414 1.414L18.364 7.05a1 1 0 01-1.414-1.414l1.414-1.414zM19.778 18.364a1 1 0 01-1.414 1.414l-1.414-1.414a1 1 0 011.414-1.414l1.414 1.414zM5.636 19.778a1 1 0 01-1.414-1.414l1.414-1.414a1 1 0 011.414 1.414l-1.414 1.414z"/>
+      </svg>
+      <span class="theme-toggle__text" role="region" aria-live="polite" data-theme-toggle-text>Enable dark theme</span>
+    </button>
+
+    {{ content | safe }}
+
+    <footer class="footer">
+      <h2 class="t-micro-heading">Contact</h2>
+      <div class="contact footer__contact">
+        <a class="t-link" href="https://linkedin.com/in/davidluhr" target="_blank" rel="nofollow">linkedin.com/in/davidluhr</a>
+        <a class="t-link" href="https://twitter.com/david_luhr" target="_blank" rel="nofollow">twitter.com/david_luhr</a>
+        <a class="t-link" href="https://youtube.com/buildux" target="_blank" rel="nofollow">youtube.com/buildux</a>
+        <a class="t-link" href="https://github.com/davidluhr" target="_blank" rel="nofollow">github.com/davidluhr</a>
+      </div>
+      <small class="footer__small">Copyright &copy; 2015&ndash;2020</small>
+    </footer>
+
+    <script src="/scripts/app.js"></script>
+  </body>
+</html>

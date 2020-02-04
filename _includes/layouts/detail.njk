@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+bodyClass: detail-layout
+---
+
+<header class="header">
+  <a class="t-link" href="/work">Back to all work</a>
+  <a class="home-link" href="/">
+    <svg class="home-link__logo" viewBox="0 0 89 18" width="89" height="18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M.603.2V17h10.944v-2.88H3.771V.2H.603zM23.46.2v10.896c0 3.84 2.448 6.24 6.576 6.24s6.576-2.4 6.576-6.24V.2h-3.168v10.992c0 2.064-1.2 3.312-3.408 3.312s-3.408-1.248-3.408-3.312V.2H23.46zM49.626.2V17h3.168v-6.984h6.336V17h3.168V.2H59.13v6.936h-6.336V.2h-3.168zM88.16 5.48C88.16 2.288 85.95.2 82.783.2H75.39V17h3.168v-6.24h2.76L84.392 17h3.576l-3.456-6.48c2.184-.624 3.648-2.472 3.648-5.04zm-9.6-2.4h3.912c1.512 0 2.52.936 2.52 2.4s-1.008 2.424-2.52 2.424H78.56V3.08z"/>
+    </svg>
+    <span class="screen-reader-only">Home</span>
+  </a>
+</header>
+
+<main class="detail" id="main">
+  <article class="detail__content">
+    {{ content | safe }}
+  </article>
+</main>

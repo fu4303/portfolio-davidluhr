@@ -1,24 +1,27 @@
 {
   "name": "david-luhr-portfolio",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "description": "David Luhr's personal portfolio site",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "David Luhr",
-  "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.26.5",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-image": "^5.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.2"
+    "build": "npx eleventy",
+    "serve": "npx eleventy --serve",
+    "debug": "DEBUG=* npx eleventy"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/davidluhr/david-luhr-portfolio.git"
+    "url": "git+https://github.com/davidluhr/david-luhr-portfolio.git"
+  },
+  "keywords": [],
+  "author": "David Luhr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidluhr/david-luhr-portfolio/issues"
+  },
+  "homepage": "https://github.com/davidluhr/david-luhr-portfolio#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "markdown-it": "^10.0.0",
+    "markdown-it-anchor": "^5.2.5"
   }
 }
