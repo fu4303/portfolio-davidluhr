@@ -32,16 +32,29 @@ const showEnableLightThemeButton = () => {
   DOMThemeToggleText.textContent = 'Enable light theme'
 }
 
-if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  themeToggleMachine.initial = 'dark'
-  showEnableLightThemeButton()
-} else {
-  themeToggleMachine.initial = 'light'
-  showEnableDarkThemeButton()
+const checkStoredThemePreference = () => {
+  if (localStorage.getItem('theme')) {
+    themeToggleMachine.initial = localStorage.getItem('theme')
+  } else {
+    setThemeBasedOnOSPreference()
+  }
 }
 
-DOMApp.dataset.theme = themeToggleMachine.initial
-let currentState = themeToggleMachine.initial
+const storeThemePreference = (themePreference) => {
+  localStorage.setItem('theme', themePreference)
+}
+
+const setThemeBasedOnOSPreference = () => {
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    themeToggleMachine.initial = 'dark'
+    storeThemePreference('dark')
+    showEnableLightThemeButton()
+  } else {
+    themeToggleMachine.initial = 'light'
+    storeThemePreference('light')
+    showEnableDarkThemeButton()
+  }
+}
 
 const transition = (state, event) => {
   return themeToggleMachine.states[state].on[event] || state
@@ -57,13 +70,20 @@ const completeToggleActions = currentState => {
   switch (currentState) {
     case 'light':
       showEnableDarkThemeButton()
+      storeThemePreference('light')
       break
     case 'dark':
       showEnableLightThemeButton()
+      storeThemePreference('dark')
       break
     default:
       break
   }
 }
+
+checkStoredThemePreference()
+
+DOMApp.dataset.theme = themeToggleMachine.initial
+let currentState = themeToggleMachine.initial
 
 DOMThemeToggle.addEventListener('click', () => send('TOGGLE'))
