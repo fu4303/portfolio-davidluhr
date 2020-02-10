@@ -4,6 +4,9 @@ const DOMThemeToggleMoonIcon = document.querySelector('[data-theme-toggle-moon]'
 const DOMThemeToggleSunIcon = document.querySelector('[data-theme-toggle-sun]')
 const DOMThemeToggleText = document.querySelector('[data-theme-toggle-text]')
 
+DOMApp.removeAttribute('data-noscript')
+DOMThemeToggle.removeAttribute('hidden')
+
 const themeToggleMachine = {
   initial: '',
   states: {
@@ -35,8 +38,17 @@ const showEnableLightThemeButton = () => {
 const checkStoredThemePreference = () => {
   if (localStorage.getItem('theme')) {
     themeToggleMachine.initial = localStorage.getItem('theme')
+    setThemeBasedOnLocalStorage(themeToggleMachine.initial)
   } else {
     setThemeBasedOnOSPreference()
+  }
+}
+
+const setThemeBasedOnLocalStorage = (initialState) => {
+  if (initialState === 'dark') {
+    showEnableLightThemeButton()
+  } else {
+    showEnableDarkThemeButton()
   }
 }
 

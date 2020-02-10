@@ -95,6 +95,21 @@
   --high-contrast-inverse: var(--high-contrast-light);
 }
 
+/* If there is no JavaScript */
+@media (prefers-color-scheme: dark) {
+  [data-noscript] {
+    --main-background: var(--main-background-dark);
+    --main-background-transparent: var(--main-background-dark-transparent);
+    --accent: var(--accent-dark);
+    --subtle-contrast: var(--subtle-contrast-dark);
+    --subtle-contrast-inverse: var(--subtle-contrast-light);
+    --medium-contrast: var(--medium-contrast-dark);
+    --medium-contrast-inverse: var(--medium-contrast-light);
+    --high-contrast: var(--high-contrast-dark);
+    --high-contrast-inverse: var(--high-contrast-light);
+  }
+}
+
 
 /* Reset */
 html {

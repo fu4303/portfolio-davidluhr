@@ -25,9 +25,9 @@
     <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#99a3ff">
   </head>
-  <body{%if bodyClass %} class="{{ bodyClass }}"{% endif %} id="app" data-theme="light">
+  <body{%if bodyClass %} class="{{ bodyClass }}"{% endif %} id="app" data-noscript data-theme="light">
     <a class="t-body skip-to-main" href="#main">Skip to main content</a>
-    <button class="theme-toggle" type="button" data-theme-toggle>
+    <button class="theme-toggle" type="button" data-theme-toggle hidden>
       <svg class="theme-toggle__icon" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-theme-toggle-moon>
         <path d="M9 15a6 6 0 005.47-8.47 6.001 6.001 0 11-7.94 7.94c.753.34 1.59.53 2.47.53z"/>
       </svg>
