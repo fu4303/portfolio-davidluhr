@@ -252,35 +252,21 @@ body {
 }
 
 .t-link {
-  position: relative;
   color: var(--high-contrast);
   font-variation-settings: "wght" 500;
   text-decoration-color: var(--accent);
   text-underline-offset: 0.5rem;
   text-decoration-thickness: 0.125rem;
-  transition: var(--transition) color;
-}
-.t-link::before {
-  content: "";
-  width: calc(100% + 0.5rem);
-  height: calc(100% + 0.75rem);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  border: 0.125rem solid transparent;
-  transition: var(--transition) border-color;
+  outline: 0.125rem solid transparent;
+  outline-offset: 0.25rem;
+  transition: var(--transition) color, var(--transition) outline-color;
 }
 .t-link:hover,
 .t-link:focus {
   color: var(--subtle-contrast);
 }
 .t-link:focus {
-  outline: none;
-}
-.t-link:focus::before {
-  border-color: var(--accent);
+  outline-color: var(--accent);
 }
 
 [lang="en"] .t-uppercase {
