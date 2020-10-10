@@ -1,6 +1,6 @@
 {
   "name": "david-luhr-portfolio",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "David Luhr's personal portfolio site",
   "main": "index.js",
   "scripts": {
@@ -20,8 +20,8 @@
   },
   "homepage": "https://github.com/davidluhr/david-luhr-portfolio#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "markdown-it": "^10.0.0",
-    "markdown-it-anchor": "^5.3.0"
+    "@11ty/eleventy": "^0.11.0",
+    "markdown-it": "^11.0.1",
+    "markdown-it-anchor": "^6.0.0"
   }
 }

@@ -1,8 +1,8 @@
-const DOMApp = document.querySelector('#app')
-const DOMThemeToggle = document.querySelector('[data-theme-toggle]')
-const DOMThemeToggleMoonIcon = document.querySelector('[data-theme-toggle-moon]')
-const DOMThemeToggleSunIcon = document.querySelector('[data-theme-toggle-sun]')
-const DOMThemeToggleText = document.querySelector('[data-theme-toggle-text]')
+const DOMApp = document.querySelector('#app');
+const DOMThemeToggle = document.querySelector('[data-theme-toggle]');
+const DOMThemeToggleMoonIcon = document.querySelector('[data-theme-toggle-moon]');
+const DOMThemeToggleSunIcon = document.querySelector('[data-theme-toggle-sun]');
+const DOMThemeToggleText = document.querySelector('[data-theme-toggle-text]');
 
 DOMApp.removeAttribute('data-noscript')
 DOMThemeToggle.removeAttribute('hidden')
@@ -21,21 +21,21 @@ const themeToggleMachine = {
       }
     },
   },
-}
+};
 
-const showEnableDarkThemeButton = () => {
+function showEnableDarkThemeButton() {
   DOMThemeToggleSunIcon.setAttribute('hidden', '')
   DOMThemeToggleMoonIcon.removeAttribute('hidden')
   DOMThemeToggleText.textContent = 'Enable dark theme'
 }
 
-const showEnableLightThemeButton = () => {
+function showEnableLightThemeButton() {
   DOMThemeToggleMoonIcon.setAttribute('hidden', '')
   DOMThemeToggleSunIcon.removeAttribute('hidden')
   DOMThemeToggleText.textContent = 'Enable light theme'
 }
 
-const checkStoredThemePreference = () => {
+function checkStoredThemePreference() {
   if (localStorage.getItem('theme')) {
     themeToggleMachine.initial = localStorage.getItem('theme')
     setThemeBasedOnLocalStorage(themeToggleMachine.initial)
@@ -44,7 +44,7 @@ const checkStoredThemePreference = () => {
   }
 }
 
-const setThemeBasedOnLocalStorage = (initialState) => {
+function setThemeBasedOnLocalStorage(initialState) {
   if (initialState === 'dark') {
     showEnableLightThemeButton()
   } else {
@@ -52,11 +52,11 @@ const setThemeBasedOnLocalStorage = (initialState) => {
   }
 }
 
-const storeThemePreference = (themePreference) => {
+function storeThemePreference(themePreference) {
   localStorage.setItem('theme', themePreference)
 }
 
-const setThemeBasedOnOSPreference = () => {
+function setThemeBasedOnOSPreference() {
   if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     themeToggleMachine.initial = 'dark'
     storeThemePreference('dark')
@@ -68,17 +68,17 @@ const setThemeBasedOnOSPreference = () => {
   }
 }
 
-const transition = (state, event) => {
+function transition(state, event) {
   return themeToggleMachine.states[state].on[event] || state
 }
 
-const send = event => {
+function send(event) {
   currentState = transition(currentState, event)
   DOMApp.setAttribute('data-theme', currentState)
   completeToggleActions(currentState)
 }
 
-const completeToggleActions = currentState => {
+function completeToggleActions(currentState) {
   switch (currentState) {
     case 'light':
       showEnableDarkThemeButton()
@@ -93,9 +93,9 @@ const completeToggleActions = currentState => {
   }
 }
 
-checkStoredThemePreference()
+checkStoredThemePreference();
 
-DOMApp.dataset.theme = themeToggleMachine.initial
-let currentState = themeToggleMachine.initial
+DOMApp.dataset.theme = themeToggleMachine.initial;
+let currentState = themeToggleMachine.initial;
 
-DOMThemeToggle.addEventListener('click', () => send('TOGGLE'))
+DOMThemeToggle.addEventListener('click', () => send('TOGGLE'));
